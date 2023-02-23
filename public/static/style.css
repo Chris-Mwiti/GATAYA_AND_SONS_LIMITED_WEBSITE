@@ -1,0 +1,171 @@
+:root{
+    --background-color: #444444;
+    --button-color: #ff8b00;
+    --body-color: #feffdb;
+    --title-font: 'Crimson Text', serif;
+    --body-font: 'Cormorant Garamond', serif;
+    --quote-font: 'Lobster', cursive;
+}
+
+body{
+    position: relative;
+    background-color: var(--body-color);
+}
+
+/* Navbar */
+
+.navbar{
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    background: #444444;
+}
+
+.container-fluid{
+    width: 100%;
+    height: 100%;
+}
+
+.navbar-brand{
+    height: 100%;
+    font: var(--title-font), 30px bold;
+}
+
+.brand{
+    letter-spacing: 1px;
+}
+
+.nav-item{
+    font-family: var(--title-font);
+    font-size: 23px;
+}
+
+.dot{
+    color: var(--button-color);
+    font-size: 40px;
+}
+
+/* Hero */
+
+.hero{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.right-container{
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+}
+
+.quote-slide{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient( 109.6deg,  rgba(255,179,71,1) 11.2%, rgba(255,155,57,1) 91.1% );
+
+}
+
+.left-container{
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-image: url(/public/static/images/logo/kom\ logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 800px;
+    
+}
+
+/* Quote Carousel */
+
+.carousel-inner{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 10px 10px 10px rgba(0,0,0,0.3);
+}
+.carousel-item{
+    width: 100%;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+.quote{
+    font-family: var(--quote-font);
+    color: black;
+    font-size: 100px;
+}
+
+/* Left container */
+
+.left-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+
+/* Get a quote form */
+
+#quote-form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 3;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    max-width: 700px;
+    height: 550px;
+    box-shadow: 0 8px 10px 0 rgba(0,0,0,0.3);
+    border-radius: 5px;
+}
+
+.title-heading{
+    text-align: center;
+    font-family: var(--title-font);
+    color: white;
+    font-size: 40px;
+}
+
+label{
+    font-size: 20px;
+}
+
+.submit-btn{
+    margin-top: 20px;
+    /* font-family: var(--body-font); */
+    font-size: 25px;
+    font-style: bolder;
+    width: 200px;
+    border: none;
+    border-radius: 3px;
+    background: var(--button-color);
+}
+
+
+/* Small screen devices */
+
+@media screen and (max-width: 768px){
+    /* HERO SECTION */
+
+    .right-container{
+        display: none;
+       
+    }
+
+    .left-container{
+        width: 100%;
+    }
+
+    .quote-form{
+        height: 100%;
+    }
+}
+
